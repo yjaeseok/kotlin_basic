@@ -62,6 +62,7 @@ fun maxOf1(a: Int, b: Int): Int {
         return b
     }
 }
+
 // Using if as an expression:
 fun maxOf2(a: Int, b: Int) = if (a > b) a else b
 
@@ -165,20 +166,20 @@ fun while1() {
 
 // @ Using when expression
 fun describe(obj: Any): String =
-        when (obj) {
-            1 -> "One"
-            "Hello" -> "Greeting"
-            is Long -> "Long"
-            !is String -> "Not a string"
-            else -> "Unknown"
-        }
+    when (obj) {
+        1 -> "One"
+        "Hello" -> "Greeting"
+        is Long -> "Long"
+        !is String -> "Not a string"
+        else -> "Unknown"
+    }
 
 // @ Using ranges
 // Check if a number is within a range using in operator:
 fun range1() {
     val x = 10
     val y = 9
-    if (x in 1..y+1) {
+    if (x in 1..y + 1) {
         println("fits in range")
     }
 }
@@ -223,7 +224,7 @@ fun collections1() {
 }
 
 // Checking if a collection contains an object using in operator:
-fun collections2() {
+fun collections3() {
     val items = listOf("apple", "banana", "kiwi")
     when {
         "orange" in items -> println("juicy")
@@ -235,8 +236,8 @@ fun collections2() {
 fun collection3() {
     val items = listOf("apple", "banana", "kiwi")
     items
-            .filter { it.startsWith("a") }
-            .sortedBy { it }
-            .map { it.toUpperCase() }
-            .forEach { println(it) }
+        .filter { it.startsWith("a") }
+        .sortedBy { it }
+        .map { it.toUpperCase() }
+        .forEach { println(it) }
 }

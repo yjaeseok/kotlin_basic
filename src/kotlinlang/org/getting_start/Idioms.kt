@@ -17,7 +17,7 @@ data class Customer(val name: String, val email: String)
 // - component1(), component2(), ..., for all properties
 
 // @ Default values for function parameters
-fun foo(a: Int = 0, b: String = "") { }
+fun foo(a: Int = 0, b: String = "") {}
 
 // @ Filtering a list
 val list = listOf(10, 0, 3, 5)
@@ -41,12 +41,17 @@ fun traversing() {
 
 // @ Using ranges
 fun ranges() {
-    for (i in 1..100) { }
-    for (i in 1 until 100) { }
-    for (x in 2..10 step 2) { }
-    for (x in 10 downTo 1) { }
+    for (i in 1..100) {
+    }
+    for (i in 1 until 100) {
+    }
+    for (x in 2..10 step 2) {
+    }
+    for (x in 10 downTo 1) {
+    }
     val x = 4
-    if (x in 1..10) { }
+    if (x in 1..10) {
+    }
 }
 
 // @ Read-only list

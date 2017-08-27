@@ -38,6 +38,7 @@ fun lambda() {
 // @ Class header formatting
 // Classes with a few arguments can be written in a single line:
 class Person(id: Int, name: String)
+
 // Classes with longer headers should be formatted so that each
 // primary constructor argument is in a separate line with indentation.
 // Also, the closing ta parenthesis should be on a new line. If we use
@@ -46,22 +47,24 @@ class Person(id: Int, name: String)
 // parenthesis:
 open class Human(id: Int, name: String) {
 }
+
 interface KotlinMaker
 class NewPerson(
-        id: Int,
-        name: String,
-        surname: String
+    id: Int,
+    name: String,
+    surname: String
 ) : Human(id, name) {
 }
+
 // For multiple interfaces, the superclass constructor call should be
 // located first and then each interface should be located in a different
 // line:
 class KotlinPerson(
-        id: Int,
-        name: String,
-        surname: String
+    id: Int,
+    name: String,
+    surname: String
 ) : Human(id, name),
-        KotlinMaker{
+    KotlinMaker {
 }
 // Constructor parameters can use either the regular indent or the
 // continuation indent (double the regular indent).
